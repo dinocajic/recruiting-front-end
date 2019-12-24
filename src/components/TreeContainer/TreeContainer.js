@@ -134,13 +134,19 @@ class TreeContainer extends Component {
      * It sets the visibility to the opposite of its current state.
      * If the child has children, it calls itself recursively and passes its children.
      */
-    toggleChildrenVisibility = ( children ) => {
+    toggleChildrenVisibility = ( children, visibility = null ) => {
         
         for ( let i = 0; i < children.length; i++ ) {
-            children[i].visible = !children[i].visible;
+            
+            if ( visibility === null ) {
+                visibility = !children[i].visible;
+                children[i].visible = visibility;
+            } else {
+                children[i].visible = visibility;
+            }
 
             if ( children[i].children.length !== 0 ) {
-                this.toggleChildrenVisibility( children[i].children );
+                this.toggleChildrenVisibility( children[i].children, visibility );
             }
         }
 

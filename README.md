@@ -6,6 +6,7 @@ Thank you for taking the time to look at my application
 
 ### React Project
 [Check out the DEMO](http://dinocajic.xyz/projects/shoot-proof/)<br /><br />
+
 The project was built using ReactJS 16.12.0.<br />
 ![Project Screen Shot](https://github.com/dinocajic/recruiting-front-end/blob/dino-cajic/screenshot.png?raw=true)<br />
 
