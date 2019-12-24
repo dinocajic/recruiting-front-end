@@ -13,8 +13,8 @@ class TreeContainer extends Component {
     /**
      * UTF-16 character codes
      */
-    rightCaret = "0x25B6";
-    downCaret  = "0x25BC";
+    rightCaret = "0x25B8";
+    downCaret  = "0x25BE";
 
     /**
      * Retrieves the data from the data structure located in ./data/testdata.json
@@ -140,10 +140,9 @@ class TreeContainer extends Component {
             
             if ( visibility === null ) {
                 visibility = !children[i].visible;
-                children[i].visible = visibility;
-            } else {
-                children[i].visible = visibility;
-            }
+            } 
+            
+            children[i].visible = visibility;
 
             if ( children[i].children.length !== 0 ) {
                 this.toggleChildrenVisibility( children[i].children, visibility );
