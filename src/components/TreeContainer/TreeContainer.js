@@ -79,7 +79,8 @@ class TreeContainer extends Component {
                     node={{
                         ...tree[i], 
                         caret: tree[i].children.length !== 0 ? tree[i].caret : "",
-                        marginLeft: marginLeft
+                        marginLeft: marginLeft,
+                        cursor: tree[i].children.length !== 0 ? "pointer" : "default"
                     }}
                     onClick={ this.updateTree }
                 />

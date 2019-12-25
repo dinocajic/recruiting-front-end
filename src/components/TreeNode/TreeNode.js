@@ -10,14 +10,15 @@ function TreeNode(props) {
         thumbnail,
         caret,
         marginLeft,
-        visible
+        visible,
+        cursor
     } = props.node;
 
     if ( visible ) {
         return (
             <div 
                 className="node-div" 
-                style={{ marginLeft: marginLeft }} 
+                style={{ marginLeft: marginLeft, cursor: cursor }} 
                 onClick={ 
                     // Calls the onClick function only if the object has children
                     props.node.children.length === 0 
