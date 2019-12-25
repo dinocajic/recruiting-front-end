@@ -28,6 +28,7 @@ function TreeNode(props) {
                 <img 
                     src={ thumbnail.href } 
                     alt={ thumbnail.description } 
+                    title={ thumbnail.description }
                     className="node-image"
                 />
     
